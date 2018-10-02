@@ -1,0 +1,17 @@
+web:
+  build: .
+  ports:
+    - "5005:80"
+  volumes:
+    - ./app:/app
+  links:
+    - db
+db:
+  image: mongo:2.8
+
+mongo-express:
+  image: mongo-express
+  ports:
+    - "5006:8081"
+  links:
+    - db:mongo
