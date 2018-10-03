@@ -1,7 +1,6 @@
-import os, json
+import os
 from flask import Flask, request, jsonify
 from pymongo import MongoClient
-from bson import json_util
 
 app = Flask(__name__)
 
