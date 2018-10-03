@@ -22,6 +22,8 @@ RUN apk add --no-cache \
 
 # Copy the Nginx global conf
 COPY nginx.conf /etc/nginx/
+COPY flask-site-nginx.conf /etc/nginx/conf.d/
+
 # Copy the base uWSGI ini file to enable default dynamic uwsgi process number
 COPY uwsgi.ini /etc/uwsgi/
 # Custom Supervisord config
