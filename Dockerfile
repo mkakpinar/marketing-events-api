@@ -6,6 +6,7 @@ COPY requirements.txt /tmp/requirements.txt
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk update
+RUN sudo apk add --upgrade apk-tools@edge
 RUN apk add --no-cache \
     python2 \
     bash \
