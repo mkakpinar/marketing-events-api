@@ -1,10 +1,10 @@
 FROM alpine
 
-LABEL maintainer "Roman Dodin <dodin.roman@gmail.com>"
-LABEL description "Nginx + uWSGI + Flask based on Alpine Linux and managed by Supervisord"
 
 # Copy python requirements file
 COPY requirements.txt /tmp/requirements.txt
+
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 RUN apk add --no-cache \
     python2 \
