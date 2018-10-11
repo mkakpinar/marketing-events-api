@@ -12,7 +12,7 @@ RUN apk add --no-cache \
     nginx \
     uwsgi \
     uwsgi-python \
-    supervisor && \
+    supervisor=3.3.4-r1 && \
     python2 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip2 install --upgrade pip setuptools && \
